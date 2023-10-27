@@ -65,7 +65,7 @@ const updateFunctionCode = async (client: LambdaClient, inputs: Inputs) => {
       new UpdateFunctionCodeCommand({
         FunctionName: inputs.functionName,
         ZipFile: zipFile,
-        Publish: true,
+        Publish: false,
       }),
     )
   }
@@ -75,7 +75,7 @@ const updateFunctionCode = async (client: LambdaClient, inputs: Inputs) => {
       new UpdateFunctionCodeCommand({
         FunctionName: inputs.functionName,
         ImageUri: inputs.imageURI,
-        Publish: true,
+        Publish: false,
       }),
     )
   }
